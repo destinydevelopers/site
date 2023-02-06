@@ -1,0 +1,37 @@
+{% load static %}
+<head>
+    <title>IT Website</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" type="text/javascript" href="{% static 'style.js'%}">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Destiny Developers</title>
+  <meta name="description" content="Startup of an IT company, We do work like Website Development, Software Development, Artificial Development etc.">
+  <meta name="author" content="Destiny Groups and Developers Pvt. Ltd.">
+  <meta name="copyright" content="Destiny Groups and Developers Pvt. Ltd.">
+  <meta name="robots" content="index, follow">
+  <meta name="rating" content="General">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  
+  <body href="{% static 'styles.css' %}">
+    <script src="{% static 'J:\My Drive\Destiny\site\destiny\myapp\templates\head.js' %}"></script>
+  
+  <header id='navbar'>
+    <nav class="navbar transparent scrolled">
+      <div class="navbar-logo" id='logo'>
+        <a href="#">
+          <img src="{{MEDIA_URL}}https://destinydevelopers.in/Group%203.png" alt="Destiny Developers">
+        </a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="#">Solutions</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  

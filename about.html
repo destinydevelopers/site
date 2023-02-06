@@ -1,0 +1,42 @@
+{% load static %}
+{% block content %}
+
+<html>
+    {% include 'header.html' %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'about-style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+
+<section class="about-section-about selected-section">
+   <video class="video-about" src="{% static 'J:\My Drive\Destiny\site\destiny\myapp\templates\Mountains - 81945.mp4' %}" autoplay loop muted></video>
+
+  <h1 class="section-header-about">About Us</h1>
+  <p>We are a leading IT company specializing in cutting-edge technology solutions for businesses of all sizes. Our team of experts is dedicated to helping organizations achieve their goals through innovative and effective technology. With a strong focus on customer satisfaction, we work tirelessly to provide our clients with the best possible experience.</p>
+  <p>Our extensive portfolio includes a range of services, from software development and cloud computing to cybersecurity and data management. We are dedicated to staying ahead of the curve and ensuring that our clients are equipped with the latest tools and technologies to succeed in the ever-evolving digital landscape.</p>
+  <p>Our commitment to excellence is reflected in everything we do, from the quality of our services to our focus on sustainability and social responsibility. We believe that the future belongs to those who embrace change and innovation, and we are proud to be at the forefront of this movement.</p>
+</section>
+
+<section class="team-section-about">
+  <h1 class="section-header-about">Meet Our Team</h1>
+  <p>Our team is made up of a diverse group of experts, each bringing their own unique skills and perspectives to the table. From software developers to project managers, our team is dedicated to providing the best possible experience for our clients.</p>
+  <div class="team-member-about">
+    <img src="{% static 'J:\My Drive\Destiny\site\destiny\myapp\templates\abhishekv.jpg' %}" alt="Team Member 1">
+    <h2 class="member-name-about">Abhishek Vadve</h2>
+    <p class="member-title-about">Founder, CEO</p>
+    <p class="member-bio-about">Abhishek is a seasoned software developer with over a decade of experience in the industry. He is passionate about using technology to drive positive change and has a proven track record of delivering innovative solutions that help businesses achieve their goals.</p>
+  </div>
+  <div class="team-member-about">
+    <img src="{% static 'J:\My Drive\Destiny\site\destiny\myapp\templates\download.jfif' %}" alt="Team Member 2">
+    <h2 class="member-name-about">Elon Musk</h2>
+    <p class="member-title-about">Project Manager</p>
+    <p class="member-bio-about">Elon is a highly organized and detail-oriented project manager with a passion for technology. She has a talent for bringing teams together and ensuring that projects are completed on time and within budget.</p>
+  </div>
+  <p>Our team is constantly growing and evolving, but one thing remains the same: our commitment to providing the best possible experience for our clients.</p>
+</section>
+
+</html>
+{% endblock %}

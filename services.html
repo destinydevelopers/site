@@ -1,0 +1,23 @@
+{% load static %}
+{% block content %}
+{% include 'header.html' %}
+<body href="{% static 'service-style.css'%}">
+    <section>
+        <video id='video-section' src="{% static "J:\My Drive\Destiny\site\destiny\myapp\templates\production.mp4" %}" autoplay loop muted></video>
+        <div class="company-name">DESTINY</br>DEVELOPERS</div>
+        <div class="moto">WE MAKE DESTINY</div>
+        <div class="buttons">
+        <button class="learn-more-btn">Learn More</button>
+        <button class="contact-btn">Contact</button>
+        </div>
+    </section>
+    <section>
+      <h1>Our Services</h1>
+      <ul>
+        <li>{{ services.title }} - {{ services.description }}</li>
+      </ul>
+    </section>
+
+</body>
+    
+{% endblock %}

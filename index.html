@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  {% include 'header.html' %}
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<body>
+  <section class="selected-section">
+    <video class="video1" src="{% static 'J:\My Drive\Destiny\site\destiny\myapp\templates\content\server.mp4' %}" autoplay loop muted></video>
+    <div class="overlay"></div>
+    <div class="company-name">DESTINY</br>DEVELOPERS</div>
+    <div class="moto">WE MAKE DESTINY</div>
+    <div class="buttons">
+    <button class="learn-more-btn">Learn More</button>
+    <button class="contact-btn">Contact</button>
+    </div>
+</section>
+
+  <section class="about-section">
+    <h2 style="font-weight: bold;">About</h2>
+    <p>
+      Destiny Developers Established in 2021</br>By Abhishek Vadve and his Teammates.
+    </p>
+    <div class="cutout-img">
+      <img src="{% static 'J:\My Drive\Destiny\site\destiny\myapp\templates\content\vr.webp' %}">
+    </div>
+    <button class="learn-more-btn">Read More</button>
+  </section>
+
+<section class="services-section">  
+  <div>
+    <h2 class="section-title">What we offer</h2>
+    <h3 class="section-description">With a comprehensive range of services, Destiny Developers can guarantee your technology needs are not just met, but exceeded. We work closely with our clients to create customized plans that are seamlessly integrated, effective and sustainable for many years to come. Reach out today to see how we can help.</h3>
+    <div class="services-container">
+      {% for item in services_data %}
+      <div class="service-card">
+        
+        <img class="imgservice" src="{{ MEDIA_URL }}{{ item.cardimage.url }}" alt="{{ item.title }}">
+        <h3 class="service-title">{{ item.title }}</h3>
+        <p class="service-description">{{ item.carddescription }}</p>
+        <a class="service-link" href="{% url 'services:services' item.id %}">Learn More</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section> 
+
+
+<section class="selected-section">
+  <div class="swipe-container">
+    <div class="swipe-card">
+      <div class="card-image" style="background: #373B44; 
+      background: -webkit-linear-gradient(to right, #4286f4, #373B44); 
+      background: linear-gradient(to right, #4286f4, #373B44);">
+        <div class="card-text">
+          <div class="cube-wrap">
+            <div class="cube">
+              <div class="cube-face cube-face-front">Card 1</div>
+              <div class="cube-face cube-face-back">Back</div>
+              <div class="cube-face cube-face-left">Left</div>
+              <div class="cube-face cube-face-right">Right</div>
+              <div class="cube-face cube-face-top">Top</div>
+              <div class="cube-face cube-face-bottom">Bottom</div>
+            </div>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod libero ac erat rhoncus, vel rhoncus nunc interdum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="swipe-card">
+      <div class="card-image" style="background-image: url(https://images.unsplash.com/photo-1675334758608-8f2af855a8b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80)"></div>
+      <div class="card-text">
+        <h2>Card 3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod libero ac erat rhoncus, vel rhoncus nunc interdum.</p>
+      </div>
+    </div>
+    <button id="left-button">&lt;</button>
+    <button id="right-button">&gt;</button>
+  </div>
+</section>
+
+
+<script src="{% static 'J:\My Drive\Destiny\site\destiny\myapp\templates\scroll.js' %}"></script>
+
+
+  <section class="client-section">
+    <h2 class="comment-section-title">What our Clients say</h2>
+    <h3 class="section-description"> Real-World Results and Satisfied Customers. Hear from the businesses and organizations we've helped transform with our expert IT services. From increased engagement to better ROI, our clients have seen real results that speak to the quality and impact of our work. Discover what they have to say about working with us.</h3>
+  
+    {% for client in client%}
+  <div class="client-logo-comment-container">
+    <div class="client-logo">
+      <img src="{{ client.logo.url }}" alt="{{ client.title }}">
+    </div>
+    <div class="client-comment">
+      <p>
+        {{ client.comment }}
+      </p>
+    </div>
+  </div>
+  {%endfor%}
+  </section>
+</body>
+{% include 'footer.html' %}
+
+</html>
